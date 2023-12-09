@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+
+
+.auth-container {
+    position: absolute;
+    width: 400px;
+    height: 440px;
+    max-width: 400px;
+    max-height: 440px;
+    background: #2b1168;
+    border-radius: 50px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.auth-container::before {
+    position: absolute;
+    width: 170%;
+    height: 170%;
+    content: '';
+    background-image: conic-gradient(transparent, transparent, transparent, #f4a915);
+    animation: rotate_border 6s linear infinite;
+
+}
+
+.auth-container::after {
+    position: absolute;
+    width: 170%;
+    height: 170%;
+    content: '';
+    background-image: conic-gradient(transparent, transparent, transparent, #ffffff);
+    animation: rotate_border 6s linear infinite;
+    animation-delay: -3s;
+}
+
+@keyframes rotate_border {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.auth-form {
+    position: absolute;
+    background-color: #2b1168;
+    border-radius: 50px 5px;
+    inset: 5px;
+    padding: 40px;
+    z-index: 10;
+    color: #f9fafa;
+}
+
+.auth-form h1 {
+    margin-top: 0px;
+    text-align: center;
+    color: #fffcfc;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+}
+
+.form-group label {
+    border: 1px solid #ffffffbb;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    color: #000000;
+    border: 1px solid #ffffffbb;
+    font-size: 16px;
+}
+
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    cursor: pointer;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: #e6b207;
+}
+
+.form-switch button {
+    color: white;
+    font-size: medium;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
